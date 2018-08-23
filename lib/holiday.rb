@@ -47,7 +47,6 @@ def all_supplies_in_holidays(holiday_hash)
     LIST
   end
   puts list
-  return list 
 end
 
 def all_holidays_with_bbq(holiday_hash)
