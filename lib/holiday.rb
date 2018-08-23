@@ -40,13 +40,14 @@ def all_supplies_in_holidays(holiday_hash)
       holiday = (((k1.to_s).split("_")).collect! {|el| el.capitalize}).join(" ")+ ": "
       s << holiday + v1.join(" ")
     end
-    s.length > 1 ? s = s.join("\n") : s = s.join(" ")
+    s.length > 1 ? s = s.join("\n  ") : s = s.join(" ")
     list += <<-LIST
 #{k}
   #{s}
     LIST
   end
   puts list
+  return list 
 end
 
 def all_holidays_with_bbq(holiday_hash)
